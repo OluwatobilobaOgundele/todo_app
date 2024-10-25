@@ -17,7 +17,7 @@ h1 {
     position: relative;
     color: #450e15;
     text-align: center;
-    width: 150px;
+    width: 155px;
 }
 h1::before {
     position: absolute;
