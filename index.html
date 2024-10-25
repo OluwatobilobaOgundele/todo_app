@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="todo.css">
+  </head>
+  <body>
+    <header><h1>Todo List</h1></header>
+    <main>
+     <form >
+      <label for="todo">Enter your task for the day:</label>
+    <input class="input_task" type="text" name="" id="todo" value="" autofocus required/>
+    <button class="add_task">Add
+     
+    </button>
+  </form>
+    <div class="colorMix1"></div>
+    <ul></ul> 
+    <div class="reset"></div>
+    <div class="colorMix2"></div>
+  </main>
+    <footer>
+      <svg width="100" height="100" viewBox="-100 -100 200 200">
+        <circle class="circle1" r="55"  />
+  
+        <circle class="circle2"
+          r="45"
+          stroke="#66995F"
+          stroke-width="6"
+          stroke-dasharray="6 17.56194490192345"
+          stroke-dashoffset="3"
+          fill="none"
+        />
+  
+        <g stroke="#5f4c6c" stroke-linecap="round">
+          <line id="hours" y2="-20" stroke-width="8" />
+          <line id="minutes" y2="-35" stroke-width="6" />
+        </g>
+      </svg>
+      <p>Today's Date:</p>
+    </footer>
+  
+    <script src="todo.js">
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f9f9f9;
+    font-family: sans-serif;
+}
+header {
+    background-color: #ffa102;
+    padding-block: 1.5rem;
+    margin-block-end: 1.5rem;
+}
+h1 {
+    margin: 0 auto;
+    position: relative;
+    color: #450e15;
+    text-align: center;
+    width: 150px;
+}
+h1::before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    width: 6rem;
+    height: 8%;
+    background-color: #e6dfd3;
+    border: 3px solid #e6dfd3;
+    transform: rotate(15deg);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+h1::after {
+    position: absolute;
+    content: "";
+    right: 0px;
+    bottom: -10px;
+    width: 6rem;
+    height: 8%;
+    background-color: #e6dfd3;
+    border: 3px solid #e6dfd3;
+    transform: rotate(345deg);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+main{
+    background-color: #f5e9ce;
+    width: 90%;
+    padding: 0.5rem 1rem 4rem;
+    margin-inline: auto;
+}
+
+footer {
+    background-color: #ffa102;
+     position: fixed;
+     width: 100%;
+     bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1.2rem;
+    
+}
+p {
+    float: inline-end;
+}
+.circle1 {
+    stroke: #ffa102;
+    stroke-width: 10px;
+    fill: whitesmoke;
+}
+.circle2 {
+    stroke: #111;
+    stroke-width: 6;
+    stroke-dasharray: 6 17.56194490192345;
+    stroke-dashoffset: 3;
+    fill: none;
+}
+label {
+    font-weight: 700;
+    line-height: 1.5;
+}
+.input_task {
+    font: inherit;
+height: 25px;
+width: 50%;
+border: none;
+border-top-left-radius: 8px;
+border-bottom-left-radius: 8px;
+}
+button.add_task {
+    font-weight: 600;
+    border: none;
+    height: 27px;
+    margin-inline-start: -5px;
+    width: 40px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: rgba(0, 234, 0, 0.741);
+    cursor: pointer;
+}
+div.colorMix1 {
+    position: relative;
+
+    margin-block: 1rem 2.3rem;
+    margin-inline: auto;
+    width: 90%;
+    height: 20px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: #ffa102;
+}
+div.colorMix1::before {
+    position: absolute;
+    content: "";
+    right: 95%;
+    bottom: -0.1rempx;
+    width: 3.025rem;
+    height: 3.025rem;
+    background: repeating-radial-gradient(circle, #677f70, #eb7b07 20%);
+    border: 3px solid #f5e9ce;
+    border-radius: 50% 50% 100% 0% / 92% 38% 62% 8% ;
+}
+div.colorMix1::after {
+    position: absolute;
+    content: "";
+    left: 95%;
+    bottom: -0.1;
+    width: 3.025rem;
+    height: 3.025rem;
+    background: repeating-linear-gradient(45deg, #677f70, #eb7b07 10%);
+    border: 3px solid #f5e9ce;
+    border-radius: 50% 50% 0% 100% / 36% 80% 20% 64%   ;
+}
+div.colorMix2 {
+    position: relative;
+
+    margin-top: 3rem;
+    margin-inline: auto;
+    width: 90%;
+    height: 20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #ffa102
+}
+div.colorMix2::before {
+    position: absolute;
+    content: "";
+    left: 95%;
+    bottom: 3px;
+    width: 3.025rem;
+    height: 3.025rem;
+    background: repeating-radial-gradient(circle, #677f70, #eb7b07 20%);
+    border: 3px solid #f5e9ce;
+    border-radius: 94% 6% 58% 42% / 58% 0% 100% 42%    ;
+}
+div.colorMix2::after {
+    position: absolute;
+    content: "";
+    right: 95%;
+    bottom: 3px;
+    width: 3.025rem;
+    height: 3.025rem;
+    background: repeating-linear-gradient(45deg, #677f70, #eb7b07 10%);
+    border: 3px solid #f5e9ce;
+    border-radius: 0% 100% 44% 56% / 0% 54% 46% 100%   ;
+}
+li {
+    display: grid;
+    grid-template-columns:5% 60% 13% 13% ;
+    margin-block: 0.6rem;
+}
+span {
+    padding: 0.6rem;
+    font-weight: 700;
+    background-color: #eddebb;
+}
+.delete {
+    font-weight: 600;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    background-color: red;
+    cursor: pointer;
+}
+.edit {
+    margin-inline-end: 3px;
+    font-weight: 600;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgba(64, 190, 89, 0.741);
+    cursor: pointer;
+}
+p {
+text-decoration: underline;
+}
+@media(max-width:633px) {
+    .input_task {
+        width: 80%;
+    }
+    form {
+        display: none;
+    }
+}
+form {
+    display: block;
+}
