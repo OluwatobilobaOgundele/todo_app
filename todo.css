@@ -206,3 +206,16 @@ text-decoration: underline;
 form {
     display: block;
 }
+ .reset {
+    padding-block: 0.3rem;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 1.3rem;
+    border: none;
+    border-radius: 5px;
+ }
+ .reset:hover {
+    background-color: rgb(255, 0, 0);
+    padding-block: 0.6rem;
+ }

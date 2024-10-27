@@ -3,21 +3,22 @@ const input = document.querySelector("input");
 const button = document.querySelector("button");
 const div = document.querySelector(".colorMix1");
 const div2 = document.querySelector(".colorMix2");
-const reset = document.querySelector(".reset");
+const reset = document.querySelector(".rese");
 const ul = document.querySelector("ul");
 ul.style.listStyleType = "none";
 const p = document.querySelector("p");
 const date = new Date();
 p.textContent += date.toLocaleDateString();
-// const clearButton = document.createElement('button');
-//   const clearButtonContent = document.createTextNode("Reset");
-//   clearButton.append(clearButtonContent)
-//   function resetButton(){
-//       if(ul ===''){
-//       reset.append(clearButton)
-//       }
-//   }
-//   resetButton()
+const clearButton = document.createElement('button');
+  const clearButtonContent = document.createTextNode("Reset");
+  clearButton.append(clearButtonContent)
+  clearButton.classList.add('reset')
+  function resetButton(){
+      if(ul.childElementCount > 0){
+     return reset.append(clearButton)
+      }
+  }
+ 
 
 const addTodo = (event) => {
   let todo = String(input.value);
@@ -84,19 +85,8 @@ const addTodo = (event) => {
       }, 4000);
     }
   };
-  // clearButton.addEventListener('click', () => {
-  //     let answer = confirm(
-  //         `Are you sure you want to reset the To-do task? `
-  //       );
-  //       if (answer == false) {
-  //         return;
-  //       } else {
-  //         alert(`You have reset the To-do task successfully`)
-  //         ul.innerHTML = '';
-  //         input.focus()
-  //         clearButton.remove()
-  //       }
-  // })
+  resetButton()
+ 
 };
 // Clock
 window.addEventListener("DOMContentLoaded", () => {
@@ -110,6 +100,19 @@ window.addEventListener("DOMContentLoaded", () => {
   minutesElement.setAttribute("transform", `rotate(${(360 / 60) * minute})`);
 });
 
+ clearButton.addEventListener('click', () => {
+      let answer = confirm(
+          `Are you sure you want to reset the To-do task? `
+        );
+        if (answer == false) {
+          return;
+        } else {
+          alert(`You have reset the To-do task successfully`)
+          ul.innerHTML = '';
+          input.focus()
+          clearButton.remove()
+        }
+  })
 button.addEventListener("click", addTodo);
 input.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
